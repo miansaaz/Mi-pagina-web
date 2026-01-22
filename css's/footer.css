@@ -1,0 +1,58 @@
+#footer {
+    background-color: #333;
+    text-align: center;
+    color: white;
+    padding: 20px 10px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* texto de pie de pagina */
+#footer p {
+    margin: 0;
+    font-size: 0.95em;
+    background-color: #333;
+}
+/*links del pie de pagina */
+.footer-links {
+    margin-top: 10px;
+    background-color: #333;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+    background-color: #333;
+}
+
+.footer-links a:hover {
+    color: gray;
+}
+/*Los links de las redes sociales */
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+.social-icon {
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    background-color: #333;
+}
+.social-icon:hover {
+    background-color: gray;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

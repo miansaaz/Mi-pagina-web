@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_inicials.css">
+    <link rel="icon" type="image/jpg" href="imagenes/Loguito.jpg">
+    <title>Contacto</title>
+</head>
+<body>
+    <div id="header">
+        <ul class="nav">
+            <li><a href="index_inicials.html">Inicio</a></li>
+            <li><a href="épicas_inicials.html">Actividades</a></li>
+            <li><a href="acerca_inicials.html">Acerca De</a></li>
+            <li><a href="Contacto_inicials.html">Contacto</a></li>
+        </ul>
+    </div>
+        <section class="contacto">
+            <h1>Formulario de Contacto</h1>
+            <p>Rellena el siguiente formulario para ponerte en contacto conmigo.</p>
+        
+            <form action="https://formsubmit.co/msanchez17@inscaparrella.cat" method="POST" enctype="multipart/form-data">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+        
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        
+                <input type="date" name="fecha" required>
+        
+                <select name="prioridad" required>
+                    <option value="">Selecciona prioridad</option>
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+        
+                <input list="tipos" name="tipo" placeholder="Selecciona tipo..." required>
+                <datalist id="tipos">
+                    <option value="SOPORTE">
+                    <option value="INCIDENCIA">
+                    <option value="AVERIA">
+                </datalist>
+        
+                <textarea name="descripcion" rows="5" placeholder="Escribe una descripción..." required></textarea>
+        
+                <input type="file" name="archivo" accept=".jpg,.png,.pdf,.doc,.docx,.zip">
+        
+                <div class="botones-form">
+                    <button type="reset">Resetear</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    <footer id="footer">
+        <p>&copy; 2026 Portafolio | Desarrollador: Miguel Angel Sanchez Azuaje.</p>
+        <div class="footer-links">
+            <a href="acerca_inicials.html">Acerca de</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram">Instagram</a>
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon facebook">Facebook</a>
+            <a href="https://www.twitter.com/" target="_blank" class="social-icon twitter">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

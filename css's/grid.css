@@ -1,0 +1,68 @@
+/* grid_general.css */
+
+/* Estilo automático para cosa que ya estan en la pagina */
+section.epica {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+/* Imagen destacada al principio */
+section.epica img:first-of-type {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para el contenedor de enlaces */
+section.epica .enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo de los enlaces */
+section.epica .enlaces a {
+    flex-shrink: 0;
+    padding: 10px 14px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+section.epica .enlaces a:hover {
+    background-color: #555;
+}
+/* Mini-imágenes en la parte de seguridad (epica 3) */
+section.epica .enlaces img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Responsive: cambia la grilla si hay más contenido */
+@media (min-width: 768px) {
+    section.epica {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+
+    section.epica img:first-of-type {
+        grid-column: 1 / 2;
+    }
+
+    section.epica h2,
+    section.epica p,
+    section.epica .enlaces,
+    section.epica h3 {
+        grid-column: 2 / 3;
+    }
+}
+h2 {
+    text-align: center;
+}

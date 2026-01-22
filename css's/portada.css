@@ -1,0 +1,58 @@
+/* portada */
+#presentacion {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presentacion .presentacion-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+/* Texto y boton */
+#presentacion .presentacion-contenido .texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+#presentacion .presentacion-contenido .texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+#presentacion .presentacion-contenido .texto p {
+    font-size: 1.1em;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-btn {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.hero-btn:hover {
+    background-color: gray;
+}
+img {
+    width: 85%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}

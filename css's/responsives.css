@@ -1,0 +1,94 @@
+/* TODOS ESTOS TIPOS DE RESPONSIVE SON SENCILLOS YA QUE NO QUISE HACERLOS MUY COMPLEJOS PARA NO ENROLLARME. */ 
+/*  Responsive portada */
+@media (max-width: 768px) {
+    #presentacion .presentacion-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    #presentacion .presentacion-contenido img {
+        max-width: 90%;
+    }
+
+    #presentacion .presentacion-contenido .texto h1 {
+        font-size: 2em;
+    }
+
+    #presentacion .presentacion-contenido .texto p {
+        font-size: 1em;
+    }
+}
+/* Responsive de la pagina de las actividades */
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav > li {
+        margin: 5px 0;
+    }
+
+    .epica {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+/* responsive Menú y pie de pagina */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .nav li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Responsive de la pagina de "acerca de" */
+@media (max-width: 768px) {
+    .info-texto h1 {
+        font-size: 1.5em;
+    }
+
+    .info-texto p {
+        font-size: 1em;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+    @media (max-width: 768px) {
+        .curriculum h2 {
+            font-size: 1.4em;
+        }
+    
+        .curriculum img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+/* Responsive de la pagina de contacto */
+@media (max-width: 600px) {
+    .botones-form {
+        flex-direction: column;
+    }
+}
