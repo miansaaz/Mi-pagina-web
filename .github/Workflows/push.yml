@@ -1,18 +1,17 @@
-name: Build and Deploy
-on: [push]
-permissions:
-  contents: write
+name: Deploy de la pagina
+on:
+  push:
+    branches:
+      - main
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
-    runs-on: ubuntu-latest
+  deploy-page:
+    runs-on: ubuntu-lastest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+        - name: Checkout repository
+          uses: actions/checkout@v3
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: . 
-          config: baseUrl=/
+        - name: Deploy to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: gh-pages
+            publish_dir: public
