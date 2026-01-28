@@ -7,27 +7,33 @@
     <title>Actividad 3 </title>
 </head>
 <body>
-    <h1>Variables</h1>
     <style>
-    :root {
-    /* Colors */
-    --color-black: #000;
-    --color-white: #fff;
-    --color-primary: ...;
-    --color-secondary: ...;
+        :root {
+            --color-principal: #2a7ae2;
+        }
 
-    /* Fonts */
-    --font-heading: ...;
-    --font-body: ...;
+        h1 {
+            color: var(--color-principal);
+        }
 
-    /* Gaps */
-    --gap-s: 0.9rem;
-    --gap-m: 1rem;
-    --gap-l: 1.5rem;
-    --gap-xl: 2rem;
-    --gap-xxl: 3rem;
-}
-</style>
+        a {
+            color: var(--color-principal);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <h1>Variables</h1>
+    <h2>Bienvenido a mi página</h2>
+
+    <p>
+        Visita mis sitios favoritos:
+        <a href="https://www.google.com" target="_blank">Google</a>,
+        <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a> y
+        <a href="https://www.github.com" target="_blank">GitHub</a>.
+    </p>
 
 </body>
 </html>
