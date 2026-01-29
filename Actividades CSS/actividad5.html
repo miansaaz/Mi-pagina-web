@@ -7,8 +7,50 @@
     <title>Actividad 5</title>
 </head>
 <body>
-    
-    
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: blue;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .buscador input {
+            padding: 5px;
+        }
+        .buscador button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+
+    <header>
+        <div class="logo">MiLogo</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <form class="buscador">
+            <input type="search" placeholder="Buscar...">
+            <button type="submit">[]</button>
+        </form>
+    </header>
 
 </body>
 </html>
