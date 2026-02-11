@@ -4,6 +4,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
 }
+
 p {
     line-height: 1.6;
     margin-bottom: 15px;
@@ -29,46 +30,94 @@ h3 {
     font-size: 1.3em;
     color: #444;
 }
-/* Contenedor de actividades botones HTML*/
-.botones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-    border-radius: 0%;
-}
-.botones a {
-    background-color: #222;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-}
-.botones a:hover {
-    background-color: gray;
+
+.epicas-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 
-/* Contenedor de actividades botones CSS*/
-.seccion-css {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-    border-radius: 0%;
+.contenedor-epicas {
+    max-width: 1200px;
+    margin: 25px auto 60px;
+    padding: 0 20px;
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
+
+.tarjeta-actividades {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 26px 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ececec;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-actividades:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.botones h1,
+.seccion-css h1 {
+    margin: 6px 0 20px;
+    font-size: 2rem;
+}
+
+.botones h2,
+.seccion-css h2 {
+    margin: 24px 0 10px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.grupo-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.botones a,
 .seccion-css a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
     background-color: #222;
     color: white;
-    padding: 12px 24px;
+    padding: 10px 16px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.botones a:hover,
 .seccion-css a:hover {
     background-color: gray;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .contenedor-epicas {
+        grid-template-columns: 1fr;
+        padding: 0 14px;
+    }
+
+    .tarjeta-actividades {
+        padding: 20px 14px;
+    }
+
+    .grupo-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botones a,
+    .seccion-css a {
+        width: 100%;
+    }
 }
