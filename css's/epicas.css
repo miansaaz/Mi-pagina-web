@@ -12,7 +12,7 @@ p {
     text-align: center;
 }
 
-/* Títulos */
+/* Títulos y "lo demas" XD */
 h1 {
     text-align: center;
     margin-top: 40px;
@@ -47,11 +47,11 @@ h3 {
 }
 
 .tarjeta-actividades {
-    background: #ffffff;
+    background: rgb(224, 247, 242);
     border-radius: 16px;
     padding: 26px 24px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    border: 1px solid #ececec;
+    border: 1px solid black;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
