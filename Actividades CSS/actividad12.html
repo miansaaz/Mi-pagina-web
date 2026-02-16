@@ -5,8 +5,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="../imagenes/Loguito.jpg">
     <title>Actividad 12</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            padding: 4.5rem 2.5rem 5rem;
+        }
+
+        .hero__title {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--title);
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.05;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .hero__text {
+            font-size: clamp(1.1rem, 2.2vw, 2rem);
+            line-height: 1.4;
+            max-width: 500px;
+            margin-bottom: 2.2rem;
+        }
+
+        .hero__actions {
+            display: flex;
+            align-items: center;
+            gap: 1.3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: none;
+            padding: 1rem 2.4rem;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #fff;
+            background: var(--button);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--button-hover);
+        }
+
+        .link {
+            color: var(--link);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero__visual {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bubble {
+            position: relative;
+            width: min(95%, 500px);
+            aspect-ratio: 1;
+            border-radius: 52% 48% 45% 55% / 58% 45% 55% 42%;
+            background: linear-gradient(120deg, #ef8f4d 0%, #facc31 50%, #fa7e24 100%);
+            padding: 12px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .bubble::before {
+            content: "";
+            position: absolute;
+            inset: 12px;
+            border-radius: inherit;
+            background: linear-gradient(140deg, #88c6d0, #6ea35f 60%, #a9d9ea);
+        }
+
+        .bubble::after {
+            content: "";
+            position: absolute;
+            inset: 45px;
+            border-radius: inherit;
+            background: linear-gradient(145deg, #7cc18f, #97cf8f 45%, #bfdc7d);
+            opacity: 0.35;
+        }
+
+        .card {
+            position: absolute;
+            background: #f8efdf;
+            border: 2px solid #2b1f1b;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+            z-index: 3;
+        }
+
+        .card--small {
+            width: 120px;
+            left: 4%;
+            bottom: 20%;
+            padding: 1rem 0.8rem 2.2rem;
+            text-align: center;
+        }
+
+        .card--small::after {
+            content: "ADD TO CART";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #bf4d9f;
+            color: #fff;
+            font-size: 0.6rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            padding: 0.4rem;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .product {
+            width: 40px;
+            height: 90px;
+            margin: 0 auto;
+            border-radius: 12px;
+            background: linear-gradient(#fff, #d4f1d1);
+            border: 1px solid #777;
+        }
+
+        .card--big {
+            width: 230px;
+            right: -8%;
+            top: 24%;
+            padding: 0.8rem;
+            background: #f7efe7;
+        }
+
+        .card--big p {
+            font-size: 0.75rem;
+            margin-bottom: 0.6rem;
+            color: #46342c;
+        }
+
+        .layout-mini {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .layout-mini span {
+            display: block;
+            height: 52px;
+            border: 1px solid #7f6d67;
+            border-radius: 2px;
+            background: linear-gradient(140deg, #f76691, #d57fcb);
+        }
+
+        .card--big button {
+            width: 100%;
+            border: none;
+            background: #ef6f2f;
+            color: white;
+            font-size: 0.63rem;
+            padding: 0.45rem;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .tooltip {
+            position: absolute;
+            right: -2%;
+            top: 12%;
+            background: #fff;
+            border: 1px solid #2f2f2f;
+            border-radius: 8px;
+            font-size: 0.72rem;
+            padding: 0.45rem 0.65rem;
+            z-index: 4;
+        }
+
+        .note {
+            background: var(--blue-band);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: clamp(1rem, 1.8vw, 1.95rem);
+            line-height: 1.4;
+        }
+
+        .note a {
+            color: #005d77;
+        }
+            .hero__title,
+            .hero__text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero__actions {
+                justify-content: center;
+            }
+
+            .card--small {
+                left: 2%;
+            }
+
+            .card--big {
+                right: 2%;
+            }
+    </style>
+
 </head>
 <body>
-    
+    <main class="hero">
+        <section>
+            <h1 class="hero__title">Ponte manos a la obra y aumenta las ventas</h1>
+            <p class="hero__text">Consigue que tus clientes interactúen y haz crecer tu negocio con la plataforma de marketing avanzada pero fácil de usar de Mailchimp.</p>
+            <div class="hero__actions">
+                <button class="btn">Suscríbete</button>
+                <a class="link" href="#">Comparar planes</a>
+            </div>
+        </section>
+
+        <section class="hero__visual" aria-hidden="true">
+            <div class="bubble"></div>
+            <div class="card card--small">
+                <div class="product"></div>
+            </div>
+            <div class="tooltip">✉️&nbsp; Send emails<br>to shoppers</div>
+            <div class="card card--big">
+                <p>Creative Assistant</p>
+                <div class="layout-mini">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button>See New Designs</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="note">
+        Mailchimp ha sido adquirida por Intuit. Nuestro cofundador y CEO compartió la noticia con nuestros clientes. Léela <a href="#">aquí</a> en inglés.
+    </div>
 </body>
 </html>
