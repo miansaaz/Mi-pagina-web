@@ -5,8 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="../imagenes/Loguito.jpg">
     <title>Actividad 14</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 32px;
+            background-color: #efefef;
+            font-family: "Times New Roman", serif;
+            display: grid;
+            gap: 32px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 72px;
+            font-size: 84px;
+            line-height: 1.15;
+        }
+
+        .lista-cuadrados {
+            list-style-type: square;
+        }
+
+        .lista-corazones {
+            list-style: none;
+            padding-left: 0;
+            font-size: 92px;
+        }
+
+        .lista-corazones li::before {
+            content: "❤";
+            color: #e52b4a;
+            margin-right: 28px;
+            font-size: 0.95em;
+            vertical-align: middle;
+        }
+
+        .menu-vertical {
+            list-style: none;
+            padding-left: 0;
+            width: 760px;
+            font-size: 102px;
+            border: 6px solid #000;
+            background-color: #6f99a9;
+            color: #f2f7fa;
+            text-align: center;
+        }
+
+        .menu-vertical li {
+            padding: 24px;
+        }
+
+        .menu-vertical li + li {
+            border-top: 6px solid #000;
+        }
+
+        .lista-batman {
+            list-style: none;
+            padding-left: 0;
+            font-size: 88px;
+        }
+
+        .lista-batman li::before {
+            content: "🦇";
+            margin-right: 24px;
+            font-size: 0.95em;
+            vertical-align: middle;
+        }
+    </style>
+
 </head>
 <body>
-    
+    <ul class="lista-cuadrados">
+        <li>Lorem.</li>
+        <li>Adipisci?</li>
+        <li>Libero.</li>
+    </ul>
+
+    <ul class="lista-corazones">
+        <li>Canela</li>
+        <li>Chispa</li>
+        <li>Brisa</li>
+    </ul>
+
+    <ul class="menu-vertical">
+        <li>Productos</li>
+        <li>Carrito</li>
+        <li>Perfil</li>
+    </ul>
+
+    <ul class="lista-batman">
+        <li>Bat-coche</li>
+        <li>Bat-traje</li>
+        <li>Bat-cueva</li>
+    </ul>
 </body>
 </html>
