@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="../imagenes/Loguito.jpg">
     <title>Actividad 20</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor-3d {
+            perspective: 900px;
+        }
+
+        .imagen-3d {
+            width: 320px;
+            max-width: 90vw;
+            border-radius: 16px;
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+            transition: transform 0.45s ease, box-shadow 0.45s ease;
+            transform-style: preserve-3d;
+            display: block;
+        }
+
+        .contenedor-3d:hover .imagen-3d {
+            transform: rotateY(16deg) rotateX(8deg) scale(1.05);
+            box-shadow: -18px 24px 45px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
-    
+    <figure class="contenedor-3d">
+        <img class="imagen-3d" src="../imagenes/carrito.png" alt="Imagen con efecto 3D al pasar el ratón">
+    </figure>
 </body>
 </html>

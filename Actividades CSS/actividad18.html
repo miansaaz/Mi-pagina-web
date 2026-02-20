@@ -5,8 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="../imagenes/Loguito.jpg">
     <title>Actividad 18</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            color: #1f2937;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .contenedor {
+            width: min(900px, 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .seccion {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            margin: 0 0 16px;
+            font-size: 1.2rem;
+        }
+
+        .boton-casi-recto {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .boton-casi-recto:hover {
+            transform: rotate(15deg);
+        }
+
+        .modal-demo {
+            width: 220px;
+            height: 130px;
+            border-radius: 16px;
+            background: #0f172a;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+            transform-origin: center;
+            transition: transform 0.35s ease;
+        }
+
+        .modal-demo:hover {
+            transform: scale(2);
+        }
+
+        .circulos {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            min-height: 120px;
+        }
+
+        .circulo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        .rojo {
+            background: rgb(220, 38, 38);
+        }
+
+        .azul {
+            background: rgba(37, 99, 235, 0.5);
+            transition: transform 0.45s ease;
+        }
+
+        .azul:hover {
+            transform: translateX(-55px);
+        }
+    </style>
 </head>
 <body>
-    
+    <main class="contenedor">
+        <section class="seccion">
+            <h2>Botón giratorio</h2>
+            <button class="boton-casi-recto">casi recto</button>
+        </section>
+
+        <section class="seccion">
+            <h2>Modal que se duplica</h2>
+            <div class="modal-demo">Modal</div>
+        </section>
+
+        <section class="seccion">
+            <h2>Mezcla de círculos</h2>
+            <div class="circulos">
+                <div class="circulo rojo"></div>
+                <div class="circulo azul"></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

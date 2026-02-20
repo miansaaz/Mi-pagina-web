@@ -5,8 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="../imagenes/Loguito.jpg">
     <title>Actividad 16</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fb;
+            color: #1f2937;
+            padding: 1.5rem;
+        }
+
+        .tabla-wrapper {
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            min-width: 760px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        thead {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="tabla-wrapper" aria-label="Contenedor con desplazamiento horizontal para móviles">
+        <table>
+            <caption>Mi tabla</caption>
+            <thead>
+                <tr>
+                    <th>Cosa 1</th>
+                    <th>Cosa 2</th>
+                    <th>Cosa 3</th>
+                    <th>Cosa 4</th>
+                    <th>Cosa 5</th>
+                    <th>Cosa 6</th>
+                    <th>Cosa 7</th>
+                    <th>Cosa 8</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contenido de la Cosa 1</td>
+                    <td>Contenido de la Cosa 2</td>
+                    <td>Contenido de la Cosa 3</td>
+                    <td>Contenido de la Cosa 4</td>
+                    <td>Contenido de la Cosa 5</td>
+                    <td>Contenido de la Cosa 6</td>
+                    <td>Contenido de la Cosa 7</td>
+                    <td>Contenido de la Cosa 8</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
